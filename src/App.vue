@@ -1,18 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <c-layout>
+    <c-main />
+  </c-layout>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import {defineComponent} from 'vue'
+
+import CLayout from '@/components/Layout.vue'
+import CMain from '@/components/Main.vue'
 
 export default defineComponent({
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld,
+    CLayout,
+    CMain,
   },
-});
+})
 </script>
 
 <style>
@@ -23,5 +27,18 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+details {
+  text-align: left;
+}
+
+summary {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  font-weight: 600;
+
+  background-color: paleturquoise;
 }
 </style>
